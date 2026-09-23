@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shree Edu Connect</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f8fafc;
+            color: #172033;
+        }
+
+        header {
+            background: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #155eef;
+        }
+
+        nav a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 90px 20px;
+            background: linear-gradient(135deg, #eaf2ff, #ffffff);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            color: #123b82;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #555;
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        .buttons {
+            margin-top: 35px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 28px;
+            margin: 8px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .primary {
+            background: #155eef;
+            color: white;
+        }
+
+        .secondary {
+            background: #ff8a00;
+            color: white;
+        }
+
+        .section {
+            padding: 70px 7%;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            width: 280px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            margin: 15px 0;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: #123b82;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 5px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Shree Edu Connect</div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Find Tutor</a>
+        <a href="#">Become Tutor</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+
+    <h1>Shree Edu Connect</h1>
+
+    <h2>Connecting Students with the Right Mentor.</h2>
+
+    <p>
+        सही शिक्षक को सही विद्यार्थी से जोड़ना।
+        <br><br>
+        Find the right home or online tutor for your needs,
+        or join us as a tutor and find teaching opportunities.
+    </p>
+
+    <div class="buttons">
+
+        <a href="#" class="btn primary">
+            🧑‍🎓 मुझे शिक्षक चाहिए | Find a Tutor
+        </a>
+
+        <a href="#" class="btn secondary">
+            👨‍🏫 मैं शिक्षक हूँ | Become a Tutor
+        </a>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <h2>कैसे काम करता है? | How It Works</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h1>01</h1>
+            <h3>अपनी जरूरत बताएं</h3>
+            <p>
+                कक्षा, विषय, एरिया और अपनी जरूरत की जानकारी दें।
+            </p>
+        </div>
+
+        <div class="card">
+            <h1>02</h1>
+            <h3>शिक्षक खोजें</h3>
+            <p>
+                अपनी जरूरत और एरिया के अनुसार उपयुक्त शिक्षक खोजें।
+            </p>
+        </div>
+
+        <div class="card">
+            <h1>03</h1>
+            <h3>पढ़ाई शुरू करें</h3>
+            <p>
+                सही शिक्षक से संपर्क करें और पढ़ाई शुरू करें।
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <h2>Why Shree Edu Connect?</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h1>🏠</h1>
+            <h3>Home Tuition</h3>
+            <p>अपने घर पर शिक्षक से पढ़ाई करें।</p>
+        </div>
+
+        <div class="card">
+            <h1>💻</h1>
+            <h3>Online Tuition</h3>
+            <p>घर से online learning की सुविधा।</p>
+        </div>
+
+        <div class="card">
+            <h1>⏰</h1>
+            <h3>Flexible Timing</h3>
+            <p>अपनी सुविधा के अनुसार समय चुनें।</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <h2>हमारे बारे में | About Us</h2>
+
+    <p style="max-width:700px;margin:auto;line-height:1.8;color:#555;">
+        Shree Edu Connect is a platform designed to connect
+        students and parents with suitable tutors.
+        We also help teachers and graduates find teaching opportunities.
+    </p>
+
+</section>
+
+<footer>
+
+    <h3>Shree Edu Connect</h3>
+
+    <p>सही शिक्षक को सही विद्यार्थी से जोड़ना।</p>
+
+    <br>
+
+    <p>© 2026 Shree Edu Connect. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>
