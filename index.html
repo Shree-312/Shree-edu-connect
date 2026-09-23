@@ -1,283 +1,503 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Shree Edu Connect</title>
+  <title>Shree Edu Connect | Right Tutor, Right Mentor</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-        body {
-            background: #f8fafc;
-            color: #172033;
-        }
+    body {
+      background: #f7f9fc;
+      color: #1f2937;
+      line-height: 1.6;
+    }
 
-        header {
-            background: white;
-            padding: 18px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-        }
+    header {
+      background: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #155eef;
-        }
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #123c88;
+    }
 
-        nav a {
-            margin-left: 25px;
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-        }
+    .logo span {
+      color: #f59e0b;
+    }
 
-        .hero {
-            text-align: center;
-            padding: 90px 20px;
-            background: linear-gradient(135deg, #eaf2ff, #ffffff);
-        }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin-left: 22px;
+      font-weight: 600;
+    }
 
-        .hero h1 {
-            font-size: 48px;
-            color: #123b82;
-            margin-bottom: 15px;
-        }
+    nav a:hover {
+      color: #123c88;
+    }
 
-        .hero h2 {
-            font-size: 28px;
-            margin-bottom: 15px;
-        }
+    .hero {
+      background: linear-gradient(135deg, #123c88, #2563eb);
+      color: white;
+      text-align: center;
+      padding: 90px 20px;
+    }
 
-        .hero p {
-            font-size: 18px;
-            color: #555;
-            max-width: 650px;
-            margin: auto;
-            line-height: 1.6;
-        }
+    .hero h1 {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
 
-        .buttons {
-            margin-top: 35px;
-        }
+    .hero h2 {
+      font-size: 24px;
+      font-weight: normal;
+      margin-bottom: 12px;
+    }
 
-        .btn {
-            display: inline-block;
-            padding: 15px 28px;
-            margin: 8px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
 
-        .primary {
-            background: #155eef;
-            color: white;
-        }
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      margin: 8px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
 
-        .secondary {
-            background: #ff8a00;
-            color: white;
-        }
+    .btn-orange {
+      background: #f59e0b;
+      color: white;
+    }
 
-        .section {
-            padding: 70px 7%;
-            text-align: center;
-        }
+    .btn-white {
+      background: white;
+      color: #123c88;
+    }
 
-        .section h2 {
-            font-size: 32px;
-            margin-bottom: 40px;
-        }
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
 
-        .cards {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
+    section {
+      padding: 70px 7%;
+    }
 
-        .card {
-            background: white;
-            width: 280px;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        }
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      color: #123c88;
+      margin-bottom: 40px;
+    }
 
-        .card h3 {
-            margin: 15px 0;
-        }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
 
-        .card p {
-            color: #666;
-            line-height: 1.6;
-        }
+    .card {
+      background: white;
+      padding: 35px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
 
-        footer {
-            background: #123b82;
-            color: white;
-            text-align: center;
-            padding: 30px;
-        }
+    .card-icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
 
-        @media (max-width: 700px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
+    .card h3 {
+      color: #123c88;
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
 
-            nav a {
-                margin: 5px;
-                font-size: 14px;
-            }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
 
-            .hero h1 {
-                font-size: 34px;
-            }
+    .step {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    }
 
-            .hero h2 {
-                font-size: 22px;
-            }
-        }
-    </style>
+    .step-number {
+      width: 50px;
+      height: 50px;
+      margin: auto auto 15px;
+      background: #123c88;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .features {
+      background: #eef4ff;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .feature {
+      background: white;
+      padding: 25px;
+      text-align: center;
+      border-radius: 12px;
+    }
+
+    .feature h3 {
+      color: #123c88;
+      margin-bottom: 8px;
+    }
+
+    .about {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .contact {
+      background: #123c88;
+      color: white;
+      text-align: center;
+      border-radius: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .contact h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background: #0b1f45;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 5px;
+        font-size: 14px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero h2 {
+        font-size: 20px;
+      }
+
+      .cards,
+      .steps,
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 50px 5%;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-    <div class="logo">Shree Edu Connect</div>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">🎓 SHREE <span>EDU CONNECT</span></div>
 
     <nav>
-        <a href="#">Home</a>
-        <a href="#">Find Tutor</a>
-        <a href="#">Become Tutor</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+      <a href="#home">Home</a>
+      <a href="#find">Find a Tutor</a>
+      <a href="#teach">Become a Tutor</a>
+      <a href="#how">How It Works</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
-</header>
+  </header>
 
-<section class="hero">
 
-    <h1>Shree Edu Connect</h1>
+  <!-- HERO -->
+  <section class="hero" id="home">
 
-    <h2>Connecting Students with the Right Mentor.</h2>
+    <h1>Connecting Students with the Right Mentor</h1>
+
+    <h2>सही शिक्षक को सही विद्यार्थी से जोड़ना।</h2>
 
     <p>
-        सही शिक्षक को सही विद्यार्थी से जोड़ना।
-        <br><br>
-        Find the right home or online tutor for your needs,
-        or join us as a tutor and find teaching opportunities.
+      Find trusted tutors for Home Tuition & Online Classes.
     </p>
 
-    <div class="buttons">
+    <a href="#find" class="btn btn-orange">
+      📚 I Need a Tutor
+    </a>
 
-        <a href="#" class="btn primary">
-            🧑‍🎓 मुझे शिक्षक चाहिए | Find a Tutor
-        </a>
+    <a href="#teach" class="btn btn-white">
+      👨‍🏫 I Want to Teach
+    </a>
 
-        <a href="#" class="btn secondary">
-            👨‍🏫 मैं शिक्षक हूँ | Become a Tutor
-        </a>
+  </section>
 
-    </div>
 
-</section>
+  <!-- TWO OPTIONS -->
+  <section id="find">
 
-<section class="section">
-
-    <h2>कैसे काम करता है? | How It Works</h2>
+    <h2 class="section-title">
+      How Can We Help You?
+    </h2>
 
     <div class="cards">
 
-        <div class="card">
-            <h1>01</h1>
-            <h3>अपनी जरूरत बताएं</h3>
-            <p>
-                कक्षा, विषय, एरिया और अपनी जरूरत की जानकारी दें।
-            </p>
-        </div>
+      <div class="card">
 
-        <div class="card">
-            <h1>02</h1>
-            <h3>शिक्षक खोजें</h3>
-            <p>
-                अपनी जरूरत और एरिया के अनुसार उपयुक्त शिक्षक खोजें।
-            </p>
-        </div>
+        <div class="card-icon">📚</div>
 
-        <div class="card">
-            <h1>03</h1>
-            <h3>पढ़ाई शुरू करें</h3>
-            <p>
-                सही शिक्षक से संपर्क करें और पढ़ाई शुरू करें।
-            </p>
-        </div>
+        <h3>I Need a Tutor</h3>
 
-    </div>
+        <p>
+          Looking for a qualified teacher for your child?
+          Tell us your requirement and we will help you
+          find the right mentor.
+        </p>
 
-</section>
+        <br>
 
-<section class="section">
+        <a href="#contact" class="btn btn-orange">
+          Find a Teacher
+        </a>
 
-    <h2>Why Shree Edu Connect?</h2>
+      </div>
 
-    <div class="cards">
 
-        <div class="card">
-            <h1>🏠</h1>
-            <h3>Home Tuition</h3>
-            <p>अपने घर पर शिक्षक से पढ़ाई करें।</p>
-        </div>
+      <div class="card" id="teach">
 
-        <div class="card">
-            <h1>💻</h1>
-            <h3>Online Tuition</h3>
-            <p>घर से online learning की सुविधा।</p>
-        </div>
+        <div class="card-icon">👨‍🏫</div>
 
-        <div class="card">
-            <h1>⏰</h1>
-            <h3>Flexible Timing</h3>
-            <p>अपनी सुविधा के अनुसार समय चुनें।</p>
-        </div>
+        <h3>I Want to Teach</h3>
+
+        <p>
+          Are you a teacher, tutor or subject expert?
+          Join Shree Edu Connect and connect with students.
+        </p>
+
+        <br>
+
+        <a href="#contact" class="btn btn-orange">
+          Register as Tutor
+        </a>
+
+      </div>
 
     </div>
 
-</section>
+  </section>
 
-<section class="section">
 
-    <h2>हमारे बारे में | About Us</h2>
+  <!-- HOW IT WORKS -->
+  <section id="how">
 
-    <p style="max-width:700px;margin:auto;line-height:1.8;color:#555;">
-        Shree Edu Connect is a platform designed to connect
-        students and parents with suitable tutors.
-        We also help teachers and graduates find teaching opportunities.
+    <h2 class="section-title">
+      How It Works | कैसे काम करता है
+    </h2>
+
+    <div class="steps">
+
+      <div class="step">
+
+        <div class="step-number">1</div>
+
+        <h3>Submit Requirement</h3>
+
+        <p>
+          Student or parent shares their tuition requirement.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="step-number">2</div>
+
+        <h3>Find the Right Tutor</h3>
+
+        <p>
+          We look for a suitable teacher according to
+          subject, class and location.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="step-number">3</div>
+
+        <h3>Start Learning</h3>
+
+        <p>
+          Connect with the tutor and start your learning journey.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FEATURES -->
+  <section class="features">
+
+    <h2 class="section-title">
+      Why Shree Edu Connect?
+    </h2>
+
+    <div class="feature-grid">
+
+      <div class="feature">
+        <h3>🎯 Right Match</h3>
+        <p>Find tutors according to your requirements.</p>
+      </div>
+
+      <div class="feature">
+        <h3>🏠 Home Tuition</h3>
+        <p>Find teachers available in your area.</p>
+      </div>
+
+      <div class="feature">
+        <h3>💻 Online Classes</h3>
+        <p>Learn from teachers through online classes.</p>
+      </div>
+
+      <div class="feature">
+        <h3>🤝 Easy Connection</h3>
+        <p>Simple process for students and teachers.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section id="about">
+
+    <h2 class="section-title">
+      About Shree Edu Connect
+    </h2>
+
+    <div class="about">
+
+      <p>
+        <strong>Shree Edu Connect</strong> is a platform designed
+        to connect students and parents with suitable teachers
+        and tutors.
+      </p>
+
+      <br>
+
+      <p>
+        हमारा उद्देश्य विद्यार्थियों को उनकी जरूरत के अनुसार
+        सही शिक्षक से जोड़ना और योग्य शिक्षकों को विद्यार्थियों
+        तक पहुंचने का अवसर देना है।
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact">
+
+    <div class="contact">
+
+      <h2>Ready to Start Learning?</h2>
+
+      <p>
+        Contact us and share your requirement.
+      </p>
+
+      <br>
+
+      <a href="mailto:your-email@example.com"
+         class="btn btn-orange">
+        📧 Contact Us
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      © 2026 Shree Edu Connect. All Rights Reserved.
     </p>
 
-</section>
+    <p>
+      Connecting Students with the Right Mentor.
+    </p>
 
-<footer>
-
-    <h3>Shree Edu Connect</h3>
-
-    <p>सही शिक्षक को सही विद्यार्थी से जोड़ना।</p>
-
-    <br>
-
-    <p>© 2026 Shree Edu Connect. All Rights Reserved.</p>
-
-</footer>
+  </footer>
 
 </body>
 </html>
